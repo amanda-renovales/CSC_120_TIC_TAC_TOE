@@ -81,4 +81,24 @@ def game():
                 print_Board(myBoard)
                 print("\nGame Over.\n")                
                 print(" **** " +turn + " won. ****")
-                break
+                break 
+
+        
+        if count == 9:
+            print("\nGame Over.\n")                
+            print("It's a Tie!")
+
+        if turn =='X':
+            turn = 'O'
+        else:
+            turn = 'X'        
+    
+    restart = input("Would you like to play Again?(y/n)")
+    if restart == "y" or restart == "Y":  
+        for key in board_keys:
+            myBoard[key] = " "
+
+        game()
+
+if __name__ == "__main__":
+    game()
