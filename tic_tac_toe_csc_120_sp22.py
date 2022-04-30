@@ -27,3 +27,58 @@ def game():
 
     turn = 'X'
     count = 0
+
+    for i in range(10):
+        print_Board(myBoard)
+        print("It's your turn, " + turn + ".Where do you want to place your marker?")
+
+        move = input()        
+
+        if myBoard[move] == ' ':
+            myBoard[move] = turn
+            count += 1
+        else:
+            print("That place is filled.\nTry again. Move to which place?")
+            continue
+ 
+        if count >= 5:
+            if myBoard['1'] == myBoard['2'] == myBoard['3'] != ' ': 
+                print_Board(myBoard)
+                print("\nGame Over.\n")                
+                print(" **** " +turn + " won. ****")                
+                break
+            elif myBoard['4'] == myBoard['5'] == myBoard['6'] != ' ': 
+                print_Board(myBoard)
+                print("\nGame Over.\n")                
+                print(" **** " +turn + " won. ****")
+                break
+            elif myBoard['7'] == myBoard['8'] == myBoard['9'] != ' ': 
+                print_Board(myBoard)
+                print("\nGame Over.\n")                
+                print(" **** " +turn + " won. ****")
+                break
+            elif myBoard['7'] == myBoard['4'] == myBoard['1'] != ' ': 
+                print_Board(myBoard)
+                print("\nGame Over.\n")                
+                print(" **** " +turn + " won. ****")
+                break
+            elif myBoard['8'] == myBoard['5'] == myBoard['2'] != ' ': 
+                print_Board(myBoard)
+                print("\nGame Over.\n")                
+                print(" **** " +turn + " won. ****")
+                break
+            elif myBoard['9'] == myBoard['6'] == myBoard['3'] != ' ': 
+                print_Board(myBoard)
+                print("\nGame Over.\n")                
+                print(" **** " +turn + " won. ****")
+                break 
+            elif myBoard['3'] == myBoard['5'] == myBoard['7'] != ' ': 
+                print_Board(myBoard)
+                print("\nGame Over.\n")                
+                print(" **** " +turn + " won. ****")
+                break
+            elif myBoard['9'] == myBoard['5'] == myBoard['1'] != ' ': 
+                print_Board(myBoard)
+                print("\nGame Over.\n")                
+                print(" **** " +turn + " won. ****")
+                break
